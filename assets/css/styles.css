@@ -215,6 +215,51 @@ strong { color: var(--text); }
 .nav-links a:hover::after, .nav-links a.is-active::after { right: 0; }
 .nav-links a.is-active { color: var(--accent); }
 
+.nav-dropdown { position: relative; list-style: none; }
+.nav-dropdown-toggle {
+  display: flex; align-items: center; gap: 6px;
+  background: transparent; border: none; color: var(--text);
+  font-family: var(--fd);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.82rem;
+  padding: 6px 0;
+}
+.nav-dropdown-toggle .caret { font-size: 0.6rem; color: var(--accent); transition: transform 0.2s ease; }
+.nav-dropdown-toggle.is-active { color: var(--accent); }
+.nav-dropdown:hover .nav-dropdown-toggle .caret,
+.nav-dropdown.is-open .nav-dropdown-toggle .caret { transform: rotate(180deg); }
+.nav-dropdown-menu {
+  position: absolute; top: calc(100% + 14px); left: 50%;
+  transform: translateX(-50%) translateY(-6px);
+  min-width: 160px;
+  background: rgba(5, 5, 5, 0.98);
+  border: 1px solid var(--border-s);
+  border-radius: var(--r);
+  padding: 8px;
+  opacity: 0; visibility: hidden; pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  z-index: 20;
+}
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown.is-open .nav-dropdown-menu {
+  opacity: 1; visibility: visible; pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+.nav-dropdown-menu a {
+  display: block;
+  padding: 10px 12px;
+  white-space: nowrap;
+  font-family: var(--fd);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.82rem;
+  color: var(--text);
+  border-radius: var(--r);
+}
+.nav-dropdown-menu a::after { display: none; }
+.nav-dropdown-menu a:hover, .nav-dropdown-menu a.is-active { color: var(--accent); background: rgba(200, 154, 58, 0.08); }
+
 .nav-actions { display: flex; align-items: center; gap: 18px; }
 .nav-cta { flex-shrink: 0; }
 
@@ -558,6 +603,14 @@ textarea.ff { resize: vertical; min-height: 110px; }
 }
 .footer-brand img { height: 44px; width: 44px; object-fit: contain; margin-bottom: 18px; }
 .footer-brand p { font-size: 0.9rem; max-width: 280px; }
+.footer-map {
+  border-radius: var(--r);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  margin-bottom: 20px;
+  max-width: 280px;
+}
+.footer-map iframe { display: block; filter: grayscale(0.3) invert(0.92) contrast(0.9); }
 .footer-col h4 {
   font-size: 0.8rem; letter-spacing: 0.14em; color: var(--accent); margin-bottom: 18px;
 }
@@ -676,12 +729,33 @@ textarea.ff { resize: vertical; min-height: 110px; }
     max-height: 0; overflow: hidden;
     transition: max-height 0.3s ease, padding 0.3s ease;
   }
-  .nav-links.is-open { max-height: 480px; padding: 10px 22px 26px; }
+  .nav-links.is-open { max-height: 640px; padding: 10px 22px 26px; }
   .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--border); }
   .nav-links a::after { display: none; }
   .nav-toggle { display: flex; }
   .nav-cta.desktop-only { display: none; }
   .nav-actions { gap: 10px; }
+
+  .nav-dropdown-toggle {
+    width: 100%; justify-content: space-between;
+    padding: 14px 0; border-bottom: 1px solid var(--border);
+  }
+  .nav-dropdown-menu {
+    /* Plain display toggle on mobile — animating max-height here fights the
+       outer nav-links flex column's own max-height transition and under-reports
+       the container's height, clipping these links out of view. */
+    display: none;
+    position: static; transform: none;
+    opacity: 1; visibility: visible; pointer-events: auto;
+    background: transparent; border: none; z-index: auto;
+    padding: 0 0 0 16px;
+  }
+  .nav-dropdown.is-open .nav-dropdown-menu { display: block; }
+  /* Same specificity as the desktop :hover/.is-open transform rule, so it must be
+     restated here (not just in the base .nav-dropdown-menu reset above) to win. */
+  .nav-dropdown:hover .nav-dropdown-menu,
+  .nav-dropdown.is-open .nav-dropdown-menu { transform: none; }
+  .nav-dropdown-menu a { padding: 12px 0; border-bottom: 1px solid var(--border); }
 
   .section { padding: 56px 0; }
   .grid, .grid.cols-3, .grid.cols-2 { grid-template-columns: 1fr; }

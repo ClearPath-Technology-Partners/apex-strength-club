@@ -26,16 +26,31 @@ const APEX_ADDRESS_LINE2 = "Vermilion, OH 44089";
 // Found via public search (Facebook page name/location match) — confirm ownership before publishing.
 const APEX_FACEBOOK_URL = "https://www.facebook.com/p/Apex-strength-Club-61581613797288/";
 
+// Verified Google Business Profile embed for Apex Strength Club — single source of truth,
+// used both on the Contact page and in the footer.
+const MAPS_EMBED_SRC = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2991.6827904318397!2d-82.3428465242122!3d41.424404071295235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883a73481b6f919f%3A0x3360d91473c4191!2sApex%20Strength%20Club!5e0!3m2!1sen!2sus!4v1783009144590!5m2!1sen!2sus";
+
 function NAV(active) {
-  const links = [
+  const primaryLinks = [
     { href: "index.html", label: "Home", key: "home" },
     { href: "memberships.html", label: "Memberships", key: "memberships" },
     { href: "amenities.html", label: "Amenities", key: "amenities" },
+    { href: "updates.html", label: "The Build", key: "updates" },
+  ];
+  const moreLinks = [
     { href: "about.html", label: "About", key: "about" },
-    { href: "updates.html", label: "Updates", key: "updates" },
     { href: "contact.html", label: "Contact", key: "contact" },
   ];
-  const linkItems = links
+  const moreIsActive = moreLinks.some((l) => l.key === active);
+
+  const linkItems = primaryLinks
+    .map(
+      (l) =>
+        `<li><a href="${l.href}"${l.key === active ? ' class="is-active" aria-current="page"' : ""}>${l.label}</a></li>`
+    )
+    .join("");
+
+  const moreItems = moreLinks
     .map(
       (l) =>
         `<li><a href="${l.href}"${l.key === active ? ' class="is-active" aria-current="page"' : ""}>${l.label}</a></li>`
@@ -53,6 +68,12 @@ function NAV(active) {
   </button>
   <ul class="nav-links" id="nav-links">
     ${linkItems}
+    <li class="nav-dropdown">
+      <button class="nav-dropdown-toggle${moreIsActive ? " is-active" : ""}" aria-expanded="false" aria-haspopup="true">More <span class="caret" aria-hidden="true">&#9662;</span></button>
+      <ul class="nav-dropdown-menu">
+        ${moreItems}
+      </ul>
+    </li>
   </ul>
   <div class="nav-actions">
     <a href="${GYMINSIGHT_URL}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm nav-cta desktop-only">Claim Founding 50</a>
@@ -66,7 +87,9 @@ const FOOTER = `
   <div class="container">
     <div class="footer-grid">
       <div class="footer-col footer-brand">
-        <img src="assets/images/favicon/logo-nav.png" alt="Apex Strength Club logo" width="44" height="44">
+        <div class="footer-map">
+          <iframe src="${MAPS_EMBED_SRC}" width="100%" height="180" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Apex Strength Club location map"></iframe>
+        </div>
         <p>Premium 24/7 strength training, recovery, and bodybuilding culture coming to Vermilion, Ohio. Family-owned, built for the committed.</p>
         <div class="footer-social">
           <a href="${APEX_FACEBOOK_URL}" target="_blank" rel="noopener noreferrer" aria-label="Apex Strength Club on Facebook">
@@ -85,7 +108,7 @@ const FOOTER = `
         <a href="memberships.html">Founding 50 Membership</a>
         <a href="amenities.html">Amenities</a>
         <a href="about.html">About Apex</a>
-        <a href="updates.html">Construction Updates</a>
+        <a href="updates.html">The Build</a>
       </div>
       <div class="footer-col">
         <h4>Hours &amp; Access</h4>
@@ -118,14 +141,14 @@ const MOBILE_STICKY_CTA = `
 </div>
 `;
 
-// Static Google Maps embed built from the confirmed address — no API key needed.
+// Verified Google Business Profile map embed (see MAPS_EMBED_SRC above).
 const MAP_SECTION = `
 <div class="map-section">
   <iframe
-    src="https://www.google.com/maps?q=${encodeURIComponent(APEX_ADDRESS_LINE1 + ", " + APEX_ADDRESS_LINE2)}&output=embed"
+    src="${MAPS_EMBED_SRC}"
     width="100%" height="440" style="border:0;"
     allowfullscreen loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"
+    referrerpolicy="strict-origin-when-cross-origin"
     title="Apex Strength Club location map">
   </iframe>
 </div>

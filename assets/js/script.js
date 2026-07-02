@@ -2,6 +2,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   initNav();
+  initNavDropdown();
   initFaq();
   initLightbox();
   initVideoGuard();
@@ -32,6 +33,36 @@ function initNav() {
       })
     );
   }
+}
+
+/* "More" nav dropdown: click-to-toggle (works for touch/keyboard), CSS handles hover on desktop. */
+function initNavDropdown() {
+  const dropdowns = document.querySelectorAll(".nav-dropdown");
+  if (!dropdowns.length) return;
+
+  const closeAll = () => {
+    dropdowns.forEach((dd) => {
+      dd.classList.remove("is-open");
+      dd.querySelector(".nav-dropdown-toggle")?.setAttribute("aria-expanded", "false");
+    });
+  };
+
+  dropdowns.forEach((dd) => {
+    const toggle = dd.querySelector(".nav-dropdown-toggle");
+    if (!toggle) return;
+    toggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isOpen = dd.classList.contains("is-open");
+      closeAll();
+      dd.classList.toggle("is-open", !isOpen);
+      toggle.setAttribute("aria-expanded", String(!isOpen));
+    });
+  });
+
+  document.addEventListener("click", closeAll);
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeAll();
+  });
 }
 
 function initFaq() {
