@@ -16,8 +16,12 @@
 
 const CLEARPATH_URL = "https://www.clearpathtechnology.org/"; // constant across every ClearPath build
 
-// Primary conversion link — Founding 50 signup (GymInsight)
-const GYMINSIGHT_URL = "https://guru.gyminsight.com/join/woMivneUurTjLHj?optionId=ec7e93fc-0196-472d-82eb-3a60684f3c2f";
+// Membership signup links (GymInsight) — Founding 50 is sold out; these are the
+// current tiers, each with its own checkout link. Single source of truth, used
+// only on memberships.html; every other page's generic CTA routes to that page.
+const SIGNUP_STANDARD_URL = "https://guru.gyminsight.com/join/woMivneUurTjLHj?optionId=e2c66595-0b4f-4cc5-a1ac-bde73cf1e7e6"; // $69.99/mo
+const SIGNUP_FIRST_RESPONDER_URL = "https://guru.gyminsight.com/join/woMivneUurTjLHj?optionId=1bc8f5aa-43d8-453d-af09-84e054739f94"; // $64.99/mo — first responders & military
+const SIGNUP_ANNUAL_URL = "https://guru.gyminsight.com/join/woMivneUurTjLHj?optionId=bb202368-a62c-4740-a666-0496cc5177de"; // $775.99/yr paid in full
 
 // CONFIRM before launch: phone number and business email are not yet public.
 const APEX_EMAIL = "hello@apexstrengthclub.com"; // placeholder — swap for the real inbox
@@ -76,7 +80,7 @@ function NAV(active) {
     </li>
   </ul>
   <div class="nav-actions">
-    <a href="${GYMINSIGHT_URL}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm nav-cta desktop-only">Claim Founding 50</a>
+    <a href="memberships.html" class="btn btn-primary btn-sm nav-cta desktop-only">View Memberships</a>
   </div>
 </nav>
 `;
@@ -105,7 +109,7 @@ const FOOTER = `
       </div>
       <div class="footer-col">
         <h4>Explore</h4>
-        <a href="memberships.html">Founding 50 Membership</a>
+        <a href="memberships.html">Memberships</a>
         <a href="amenities.html">Amenities</a>
         <a href="about.html">About Apex</a>
         <a href="updates.html">The Build</a>
@@ -124,7 +128,7 @@ const FOOTER = `
       </p>
     </div>
     <div class="footer-disclaimers">
-      <p>Founding 50 memberships are limited to the first 50 members. Card will not be charged until official opening. Terms subject to final membership agreement.</p>
+      <p>Membership pricing, discount eligibility, and terms are subject to final membership agreement and may change without notice.</p>
       <p>Interior, exterior, and facility images shown are renderings for preview purposes and may not reflect final layout or finishes.</p>
       <p>Fitness and recovery services are not medical advice. Consult a qualified professional before beginning any new training, wellness, or recovery program.</p>
     </div>
@@ -134,7 +138,7 @@ const FOOTER = `
 
 const MOBILE_STICKY_CTA = `
 <div class="mobile-sticky-cta">
-  <a href="${GYMINSIGHT_URL}" target="_blank" rel="noopener noreferrer" class="msc-claim">Claim Founding 50</a>
+  <a href="memberships.html" class="msc-claim">View Memberships</a>
   <a href="contact.html" class="msc-secondary" aria-label="Contact and email signup">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
   </a>
