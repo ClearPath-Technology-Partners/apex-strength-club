@@ -23,8 +23,8 @@ const SIGNUP_STANDARD_URL = "https://guru.gyminsight.com/join/woMivneUurTjLHj?op
 const SIGNUP_FIRST_RESPONDER_URL = "https://guru.gyminsight.com/join/woMivneUurTjLHj?optionId=1bc8f5aa-43d8-453d-af09-84e054739f94"; // $64.99/mo — first responders & military
 const SIGNUP_ANNUAL_URL = "https://guru.gyminsight.com/join/woMivneUurTjLHj?optionId=bb202368-a62c-4740-a666-0496cc5177de"; // $775.99/yr paid in full
 
-// CONFIRM before launch: phone number and business email are not yet public.
-const APEX_EMAIL = "hello@apexstrengthclub.com"; // placeholder — swap for the real inbox
+// CONFIRM before launch: phone number is not yet public.
+const APEX_EMAIL = "apexstrengthclub00@gmail.com";
 const APEX_ADDRESS_LINE1 = "4345 Liberty Avenue";
 const APEX_ADDRESS_LINE2 = "Vermilion, OH 44089";
 // Found via public search (Facebook page name/location match) — confirm ownership before publishing.
