@@ -241,6 +241,14 @@ strong { color: var(--text); }
   transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
   z-index: 20;
 }
+/* Invisible hover bridge: without this, moving the cursor straight down from
+   "More" into the gap above the menu leaves both elements and closes it
+   before the click ever lands. */
+.nav-dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -14px; left: 0; right: 0; height: 14px;
+}
 .nav-dropdown:hover .nav-dropdown-menu,
 .nav-dropdown.is-open .nav-dropdown-menu {
   opacity: 1; visibility: visible; pointer-events: auto;
@@ -719,6 +727,7 @@ textarea.ff { resize: vertical; min-height: 110px; }
 
 @media (max-width: 768px) {
   .container { padding: 0 22px; }
+  .site-nav { padding: 0 16px; }
   .nav-links {
     position: fixed; top: var(--nav-h); left: 0; right: 0;
     flex-direction: column; align-items: stretch;
@@ -733,8 +742,10 @@ textarea.ff { resize: vertical; min-height: 110px; }
   .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--border); }
   .nav-links a::after { display: none; }
   .nav-toggle { display: flex; }
-  .nav-cta.desktop-only { display: none; }
-  .nav-actions { gap: 10px; }
+  /* .nav-links is position:fixed on mobile (out of flex flow), so with the CTA
+     hidden, an empty .nav-actions box was still claiming the flex-end slot and
+     stranding the toggle away from the true right edge. Drop it from flow too. */
+  .nav-actions { display: none; }
 
   .nav-dropdown-toggle {
     width: 100%; justify-content: space-between;
