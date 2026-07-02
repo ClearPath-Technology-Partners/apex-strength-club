@@ -89,7 +89,12 @@ function initVideoGuard() {
 
   document.querySelectorAll("video[data-bg-video]").forEach((video) => {
     if (reducedMotion || saveData) {
-      video.remove(); // poster image (set as background/img sibling) remains visible
+      // Swap for a static image so the poster frame stays visible instead of leaving a blank hero.
+      const img = document.createElement("img");
+      img.src = video.getAttribute("poster");
+      img.alt = "";
+      img.className = video.className;
+      video.replaceWith(img);
       return;
     }
     video.muted = true;
