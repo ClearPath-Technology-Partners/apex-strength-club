@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css?v=8">
+<link rel="stylesheet" href="assets/css/styles.css?v=11">
 
 <script type="application/ld+json">
 {
@@ -59,7 +59,7 @@
 
   <!-- HERO -->
   <section class="hero">
-    <video class="hero-media" data-bg-video autoplay muted loop playsinline poster="assets/images/posters/apex-gym-hero.jpg">
+    <video class="hero-media" data-bg-video autoplay muted loop playsinline preload="auto" poster="assets/images/posters/apex-gym-hero.jpg">
       <source src="assets/videos/optimized/apex-gym-hero.mp4" type="video/mp4">
     </video>
     <div class="container hero-content">
@@ -81,7 +81,7 @@
   <!-- FOUNDING 50 -->
   <section class="offer-band section" id="founding50">
     <div class="container offer-grid">
-      <div>
+      <div data-reveal="left">
         <span class="kicker">Founding 50 Membership</span>
         <h2>Be one of the first 50.<br>Lock in $59/month &mdash; for life.</h2>
         <p class="lead">Founding 50 memberships are officially live. Once all 50 spots are claimed, this offer is gone for good.</p>
@@ -95,7 +95,7 @@
           <a href="memberships.html" class="btn btn-outline">Full Membership Details</a>
         </div>
       </div>
-      <div class="offer-card">
+      <div class="offer-card" data-reveal="right">
         <div class="offer-price">$59<span>/month</span></div>
         <p class="offer-note">Your card will not be charged until Apex officially opens. Month-to-month after that &mdash; cancel anytime.</p>
         <ul class="offer-list">
@@ -112,43 +112,43 @@
   <!-- WHY APEX -->
   <section class="section" id="why-apex">
     <div class="container">
-      <div class="section-header center">
+      <div class="section-header center" data-reveal="up">
         <span class="kicker" style="justify-content:center">Why Apex</span>
         <h2>Built for serious training.</h2>
         <p class="lead">Every detail is being built with purpose &mdash; for lifters, bodybuilders, athletes, and anyone ready for more than a standard local gym.</p>
       </div>
       <div class="grid">
-        <div class="card">
+        <div class="card" data-reveal="left" data-reveal-delay="1">
           <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
           <h3>24/7 Access</h3>
           <p>App-based entry built around real schedules &mdash; train before work, after work, or at 2am.</p>
         </div>
-        <div class="card">
+        <div class="card" data-reveal="right" data-reveal-delay="2">
           <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 10v4M2 11v2M20 10v4M22 11v2M7 8v8M17 8v8"/><path d="M7 12h10"/></svg></div>
           <h3>State-of-the-Art Equipment</h3>
           <p>A strength floor built for serious training, from heavy compound work to precision isolation.</p>
         </div>
-        <div class="card">
+        <div class="card" data-reveal="left" data-reveal-delay="3">
           <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg></div>
           <h3>Electric Atmosphere</h3>
           <p>Dark, dialed-in, high-energy space designed to push better workouts, every session.</p>
         </div>
-        <div class="card">
+        <div class="card" data-reveal="right" data-reveal-delay="4">
           <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="14" rx="1.5"/><path d="M3 16l5-4 4 3 5-5 4 3"/></svg></div>
           <h3>Posing Room &amp; Clinics</h3>
           <p>A dedicated mirrored space for physique athletes &mdash; built for posing practice and clinics.</p>
         </div>
-        <div class="card">
+        <div class="card" data-reveal="left" data-reveal-delay="1">
           <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21c4-3 7-6.5 7-10.5A7 7 0 0 0 5 10.5C5 14.5 8 18 12 21z"/></svg></div>
           <h3>Recovery Amenities</h3>
           <p>Train hard, recover right &mdash; recovery-focused amenities to support consistency.</p>
         </div>
-        <div class="card">
+        <div class="card" data-reveal="right" data-reveal-delay="2">
           <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 21h10M9 3h6l1 8a4 4 0 0 1-8 0l1-8z"/></svg></div>
           <h3>Smoothie Bar &amp; Supplements</h3>
           <p>Fuel up on the way in or out, plus Apex merchandise to represent the club.</p>
         </div>
-        <div class="card">
+        <div class="card" data-reveal="left" data-reveal-delay="3">
           <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 3v4M16 3v4M4 9h16"/><rect x="4" y="5" width="16" height="16" rx="2"/></svg></div>
           <h3>Premium Locker Rooms</h3>
           <p>Black tile, warm wood, and clean lighting &mdash; an upscale finish, not an afterthought.</p>
@@ -160,29 +160,29 @@
   <!-- GALLERY TEASER -->
   <section class="section section-alt" id="gallery">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header" data-reveal="up">
         <span class="kicker">Inside Apex</span>
         <h2>A first look at what's coming.</h2>
         <p class="lead">Renderings of the strength floor, posing room, lobby, and locker rooms &mdash; the visual direction for the finished club.</p>
       </div>
       <div class="gallery-grid">
-        <div class="gallery-item wide tall" data-lightbox="assets/images/web/gym-interior-main.jpg" data-caption="Main strength floor">
+        <div class="gallery-item wide tall" data-lightbox="assets/images/web/gym-interior-main.jpg" data-caption="Main strength floor" data-reveal="left">
           <img src="assets/images/web/gym-interior-main.jpg" alt="Rendering of the Apex Strength Club main weight room with racks and the gold Apex wordmark on the back wall" loading="lazy">
           <span class="gallery-caption">Main Strength Floor</span>
         </div>
-        <div class="gallery-item" data-lightbox="assets/images/web/gym-interior-lobby.jpg" data-caption="Front desk and lobby">
+        <div class="gallery-item" data-lightbox="assets/images/web/gym-interior-lobby.jpg" data-caption="Front desk and lobby" data-reveal="right" data-reveal-delay="1">
           <img src="assets/images/web/gym-interior-lobby.jpg" alt="Rendering of the Apex Strength Club lobby and front desk with gold signage" loading="lazy">
           <span class="gallery-caption">Lobby</span>
         </div>
-        <div class="gallery-item" data-lightbox="assets/images/web/posing-room-mockup.jpg" data-caption="Posing room">
+        <div class="gallery-item" data-lightbox="assets/images/web/posing-room-mockup.jpg" data-caption="Posing room" data-reveal="right" data-reveal-delay="2">
           <img src="assets/images/web/posing-room-mockup.jpg" alt="Rendering of the Apex Strength Club posing room with mirrored wall and gold branding" loading="lazy">
           <span class="gallery-caption">Posing Room</span>
         </div>
-        <div class="gallery-item wide" data-lightbox="assets/images/web/gym-interior-main-2.jpg" data-caption="Dumbbell and accessory area">
+        <div class="gallery-item wide" data-lightbox="assets/images/web/gym-interior-main-2.jpg" data-caption="Dumbbell and accessory area" data-reveal="left" data-reveal-delay="2">
           <img src="assets/images/web/gym-interior-main-2.jpg" alt="Rendering of the Apex Strength Club dumbbell and accessory training area" loading="lazy">
           <span class="gallery-caption">Free Weight Area</span>
         </div>
-        <div class="gallery-item" data-lightbox="assets/images/web/lockeroom-mockup.jpg" data-caption="Locker rooms and showers">
+        <div class="gallery-item" data-lightbox="assets/images/web/lockeroom-mockup.jpg" data-caption="Locker rooms and showers" data-reveal="right" data-reveal-delay="3">
           <img src="assets/images/web/lockeroom-mockup.jpg" alt="Rendering of the Apex Strength Club locker room and shower area with black tile and warm wood" loading="lazy">
           <span class="gallery-caption">Locker Rooms</span>
         </div>
@@ -196,13 +196,13 @@
   <!-- CONSTRUCTION TIMELINE TEASER -->
   <section class="section" id="updates-teaser">
     <div class="container split">
-      <div>
+      <div data-reveal="left">
         <span class="kicker">The Build</span>
         <h2>The build is officially underway.</h2>
         <p class="lead">Permits have been approved and final city meetings are complete. Apex is cleared to begin construction, with a targeted opening in late August to September.</p>
         <a href="updates.html" class="btn btn-outline">Follow Full Progress</a>
       </div>
-      <div class="timeline">
+      <div class="timeline" data-reveal="right">
         <div class="timeline-item">
           <span class="timeline-dot"></span>
           <span class="timeline-date">Complete</span>
@@ -228,10 +228,10 @@
   <!-- ABOUT TEASER -->
   <section class="section section-alt" id="about-teaser">
     <div class="container split reverse">
-      <div class="split-media">
+      <div class="split-media" data-reveal="right">
         <img src="assets/images/web/logo-on-bench.jpg" alt="Apex Strength Club logo embroidered on a gym bench" loading="lazy" style="border-radius:var(--rxl)">
       </div>
-      <div>
+      <div data-reveal="left">
         <span class="kicker">Family-Owned</span>
         <h2>Built from a passion for the craft.</h2>
         <p class="lead">Apex Strength Club is a family-owned strength and fitness facility coming to Vermilion, Ohio. Built from a passion for bodybuilding, healthy living, and serious training, Apex is designed to give the community a gym experience unlike anything currently available in the area.</p>
@@ -243,11 +243,11 @@
   <!-- FAQ -->
   <section class="section" id="faq">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header" data-reveal="up">
         <span class="kicker">Questions</span>
         <h2>Good to know.</h2>
       </div>
-      <div class="faq-list">
+      <div class="faq-list" data-reveal="up">
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">When will Apex open?<span class="icon">+</span></button>
           <div class="faq-answer"><div class="faq-answer-inner"><p>Apex is targeting a late August to September opening. The final date will be confirmed closer to launch.</p></div></div>
@@ -277,7 +277,7 @@
 
   <!-- FINAL CTA -->
   <section class="section section-alt" style="text-align:center; border-top:1px solid var(--border);">
-    <div class="container">
+    <div class="container" data-reveal="up">
       <span class="kicker" style="justify-content:center">Founding 50</span>
       <h2>Secure your spot before the<br>Founding 50 closes.</h2>
       <div class="cta-row" style="justify-content:center;">
@@ -305,6 +305,6 @@
   document.getElementById('footer-ph').innerHTML = FOOTER;
   document.getElementById('sticky-cta-ph').innerHTML = MOBILE_STICKY_CTA;
 </script>
-<script src="assets/js/script.js?v=3"></script>
+<script src="assets/js/script.js?v=5"></script>
 </body>
 </html>

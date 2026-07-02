@@ -37,7 +37,7 @@
 
 /* ---------- Reset ---------- */
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: var(--nav-h); }
+html { scroll-behavior: smooth; scroll-padding-top: var(--nav-h); overflow-x: hidden; }
 body {
   margin: 0;
   background: var(--bg);
@@ -46,6 +46,7 @@ body {
   font-size: 16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden; /* scroll-reveal transforms shouldn't introduce a horizontal scrollbar */
 }
 img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
@@ -305,6 +306,16 @@ strong { color: var(--text); }
   width: 100%; height: 100%;
   object-fit: cover;
   z-index: 0;
+  pointer-events: none; /* purely decorative background video — never intercept taps or show as "interactive" */
+}
+/* Belt-and-suspenders: some mobile browsers overlay a native play button on
+   any <video>, autoplaying or not. These are background decoration, not a
+   media player, so suppress every vendor's version of that control. */
+.hero-media::-webkit-media-controls,
+.hero-media::-webkit-media-controls-start-playback-button,
+.hero-media::-webkit-media-controls-play-button {
+  display: none !important;
+  -webkit-appearance: none;
 }
 .hero::after {
   content: '';
@@ -792,4 +803,37 @@ textarea.ff { resize: vertical; min-height: 110px; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .gallery-item img, .card, .nav-links, .faq-answer { transition: none; }
+}
+
+/* ============================================================
+   Scroll-reveal — elements pop in from the sides as they enter
+   the viewport (see initScrollReveal in script.js). Purely a
+   presentation layer: markup/content is unaffected either way.
+   ============================================================ */
+[data-reveal] {
+  opacity: 0;
+  transition: opacity 0.75s cubic-bezier(0.16, 0.8, 0.24, 1),
+              transform 0.75s cubic-bezier(0.16, 0.8, 0.24, 1);
+  will-change: transform, opacity;
+}
+[data-reveal="left"] { transform: translateX(-64px); }
+[data-reveal="right"] { transform: translateX(64px); }
+[data-reveal="up"] { transform: translateY(40px); }
+[data-reveal].is-revealed { opacity: 1; transform: translateX(0) translateY(0); }
+
+[data-reveal-delay="1"] { transition-delay: 0.08s; }
+[data-reveal-delay="2"] { transition-delay: 0.16s; }
+[data-reveal-delay="3"] { transition-delay: 0.24s; }
+[data-reveal-delay="4"] { transition-delay: 0.32s; }
+[data-reveal-delay="5"] { transition-delay: 0.4s; }
+[data-reveal-delay="6"] { transition-delay: 0.48s; }
+
+@media (max-width: 768px) {
+  /* Shorter throw on mobile — narrower viewports make a 64px slide feel closer to a shove. */
+  [data-reveal="left"] { transform: translateX(-32px); }
+  [data-reveal="right"] { transform: translateX(32px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] { opacity: 1; transform: none; transition: none; }
 }

@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css?v=8">
+<link rel="stylesheet" href="assets/css/styles.css?v=11">
 
 <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
 <script defer src="/_vercel/insights/script.js"></script>
@@ -34,7 +34,7 @@
 <main>
 
   <section class="hero">
-    <video class="hero-media" data-bg-video autoplay muted loop playsinline poster="assets/images/posters/building-drone.jpg">
+    <video class="hero-media" data-bg-video autoplay muted loop playsinline preload="auto" poster="assets/images/posters/building-drone.jpg">
       <source src="assets/videos/optimized/building-drone.mp4" type="video/mp4">
     </video>
     <div class="container hero-content" style="padding-top:190px;">
@@ -47,32 +47,32 @@
 
   <section class="section">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header" data-reveal="up">
         <span class="kicker">Status</span>
         <h2>Construction is officially moving forward.</h2>
         <p class="lead">Permits have been approved, final city meetings are complete, and Apex Strength Club is cleared to begin construction. The team expects construction to begin in early July, with a targeted opening in late August to September.</p>
       </div>
 
       <div class="timeline">
-        <div class="timeline-item">
+        <div class="timeline-item" data-reveal="left">
           <span class="timeline-dot"></span>
           <span class="timeline-date">Complete</span>
           <h3>Site Approved &mdash; 4345 Liberty Avenue</h3>
           <p>The Apex site plan moved to its Liberty Avenue location, a three-acre lot with room for parking and future expansion.</p>
         </div>
-        <div class="timeline-item">
+        <div class="timeline-item" data-reveal="right">
           <span class="timeline-dot"></span>
           <span class="timeline-date">Complete</span>
           <h3>Permits &amp; Final City Meetings</h3>
           <p>Permits have been approved and final city planning commission meetings are complete.</p>
         </div>
-        <div class="timeline-item is-active">
+        <div class="timeline-item is-active" data-reveal="left">
           <span class="timeline-dot"></span>
           <span class="timeline-date">In Progress</span>
           <h3>Construction Begins</h3>
           <p>Construction is expected to begin in early July, covering the strength floor, posing room, recovery spaces, locker rooms, and lobby.</p>
         </div>
-        <div class="timeline-item">
+        <div class="timeline-item" data-reveal="right">
           <span class="timeline-dot"></span>
           <span class="timeline-date">Late Aug&ndash;Sept</span>
           <h3>Grand Opening</h3>
@@ -84,7 +84,7 @@
 
   <section class="section section-alt">
     <div class="container">
-      <div class="section-header center">
+      <div class="section-header center" data-reveal="up">
         <span class="kicker" style="justify-content:center">Stay In The Loop</span>
         <h2>More updates coming as construction progresses.</h2>
         <p class="lead">Photos, milestones, and the confirmed opening date will be posted here as they happen. Join the email list so you don't miss it.</p>
@@ -107,6 +107,6 @@
   document.getElementById('footer-ph').innerHTML = FOOTER;
   document.getElementById('sticky-cta-ph').innerHTML = MOBILE_STICKY_CTA;
 </script>
-<script src="assets/js/script.js?v=3"></script>
+<script src="assets/js/script.js?v=5"></script>
 </body>
 </html>

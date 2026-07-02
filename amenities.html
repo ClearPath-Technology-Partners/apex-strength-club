@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css?v=8">
+<link rel="stylesheet" href="assets/css/styles.css?v=11">
 
 <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
 <script defer src="/_vercel/insights/script.js"></script>
@@ -34,7 +34,7 @@
 <main>
 
   <section class="hero">
-    <video class="hero-media" data-bg-video autoplay muted loop playsinline poster="assets/images/posters/gym-interior-1.jpg">
+    <video class="hero-media" data-bg-video autoplay muted loop playsinline preload="auto" poster="assets/images/posters/gym-interior-1.jpg">
       <source src="assets/videos/optimized/gym-interior-1.mp4" type="video/mp4">
     </video>
     <div class="container hero-content" style="padding-top:190px;">
@@ -46,7 +46,7 @@
 
   <section class="section" id="equipment">
     <div class="container split">
-      <div>
+      <div data-reveal="left">
         <span class="kicker">Strength Floor</span>
         <h2>State-of-the-art equipment for serious training.</h2>
         <p class="lead">Full racks, a dedicated free-weight area, and premium strength equipment built for heavy compound work and precision isolation alike &mdash; no waiting, no compromise.</p>
@@ -57,7 +57,7 @@
           <li>Open floor space for functional training</li>
         </ul>
       </div>
-      <div class="split-media">
+      <div class="split-media" data-reveal="right">
         <img src="assets/images/web/gym-interior-main-2.jpg" alt="Rendering of the Apex Strength Club free weight and dumbbell training area" loading="lazy">
       </div>
     </div>
@@ -65,10 +65,10 @@
 
   <section class="section section-alt" id="posing-room">
     <div class="container split reverse">
-      <div class="split-media">
+      <div class="split-media" data-reveal="right">
         <img src="assets/images/web/posing-room-mockup.jpg" alt="Rendering of the Apex Strength Club posing room with mirrored wall and gold Apex branding" loading="lazy">
       </div>
-      <div>
+      <div data-reveal="left">
         <span class="kicker">For Physique Athletes</span>
         <h2>A dedicated space for physique athletes.</h2>
         <p class="lead">Mirrored walls, deliberate lighting, and an open floor &mdash; purpose-built for posing practice and posing clinics, not an afterthought bolted onto a group fitness room.</p>
@@ -78,23 +78,23 @@
 
   <section class="section" id="recovery">
     <div class="container">
-      <div class="section-header center">
+      <div class="section-header center" data-reveal="up">
         <span class="kicker" style="justify-content:center">Train Hard. Recover Right.</span>
         <h2>Recovery amenities to support consistency.</h2>
         <p class="lead">Recovery is being built into Apex from day one, not added later. Final recovery offerings (sauna, cold plunge, red light therapy, massage, and similar services) will be confirmed closer to opening.</p>
       </div>
       <div class="grid cols-3">
-        <div class="card">
+        <div class="card" data-reveal="left">
           <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21c4-3 7-6.5 7-10.5A7 7 0 0 0 5 10.5C5 14.5 8 18 12 21z"/></svg></div>
           <h3>Recovery Amenities</h3>
           <p>Built to help members recover between sessions and stay consistent week over week.</p>
         </div>
-        <div class="card">
+        <div class="card" data-reveal="up" data-reveal-delay="1">
           <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 14h16"/></svg></div>
           <h3>Premium Locker Rooms</h3>
           <p>Black tile, warm wood countertops, and clean, deliberate lighting throughout.</p>
         </div>
-        <div class="card">
+        <div class="card" data-reveal="right">
           <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 4h10l-1 6h2l-6 10 1-7H9l-2 -9z"/></svg></div>
           <h3>Showers</h3>
           <p>Multiple private shower stalls finished to the same standard as the rest of the club.</p>
@@ -105,7 +105,7 @@
 
   <section class="section section-alt" id="fuel">
     <div class="container split">
-      <div>
+      <div data-reveal="left">
         <span class="kicker">Smoothie Bar &amp; Supplements</span>
         <h2>Fuel up on the way in or out.</h2>
         <p class="lead">A smoothie bar and supplement selection on-site, plus exclusive Apex merchandise so members can represent the club.</p>
@@ -115,7 +115,7 @@
           <li>Exclusive Apex merchandise</li>
         </ul>
       </div>
-      <div class="split-media">
+      <div class="split-media" data-reveal="right">
         <img src="assets/images/web/gym-interior-lobby.jpg" alt="Rendering of the Apex Strength Club lobby with retail and supplement shelving" loading="lazy">
       </div>
     </div>
@@ -123,36 +123,36 @@
 
   <section class="section" id="gallery">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header" data-reveal="up">
         <span class="kicker">Full Gallery</span>
         <h2>Every space, previewed.</h2>
       </div>
       <div class="gallery-grid">
-        <div class="gallery-item wide tall" data-lightbox="assets/images/web/gym-interior-main.jpg" data-caption="Main strength floor">
+        <div class="gallery-item wide tall" data-lightbox="assets/images/web/gym-interior-main.jpg" data-caption="Main strength floor" data-reveal="left">
           <img src="assets/images/web/gym-interior-main.jpg" alt="Rendering of the Apex Strength Club main weight room with racks and the gold Apex wordmark" loading="lazy">
           <span class="gallery-caption">Main Strength Floor</span>
         </div>
-        <div class="gallery-item" data-lightbox="assets/images/web/gym-interior-main-2.jpg" data-caption="Free weight area">
+        <div class="gallery-item" data-lightbox="assets/images/web/gym-interior-main-2.jpg" data-caption="Free weight area" data-reveal="right" data-reveal-delay="1">
           <img src="assets/images/web/gym-interior-main-2.jpg" alt="Rendering of the Apex Strength Club dumbbell and accessory training area" loading="lazy">
           <span class="gallery-caption">Free Weight Area</span>
         </div>
-        <div class="gallery-item" data-lightbox="assets/images/web/gym-interior-lobby.jpg" data-caption="Lobby and front desk">
+        <div class="gallery-item" data-lightbox="assets/images/web/gym-interior-lobby.jpg" data-caption="Lobby and front desk" data-reveal="right" data-reveal-delay="2">
           <img src="assets/images/web/gym-interior-lobby.jpg" alt="Rendering of the Apex Strength Club lobby and front desk with gold signage" loading="lazy">
           <span class="gallery-caption">Lobby</span>
         </div>
-        <div class="gallery-item" data-lightbox="assets/images/web/posing-room-mockup.jpg" data-caption="Posing room">
+        <div class="gallery-item" data-lightbox="assets/images/web/posing-room-mockup.jpg" data-caption="Posing room" data-reveal="left" data-reveal-delay="1">
           <img src="assets/images/web/posing-room-mockup.jpg" alt="Rendering of the Apex Strength Club posing room with mirrored wall" loading="lazy">
           <span class="gallery-caption">Posing Room</span>
         </div>
-        <div class="gallery-item wide" data-lightbox="assets/images/web/lockeroom-mockup.jpg" data-caption="Locker rooms and showers">
+        <div class="gallery-item wide" data-lightbox="assets/images/web/lockeroom-mockup.jpg" data-caption="Locker rooms and showers" data-reveal="left" data-reveal-delay="2">
           <img src="assets/images/web/lockeroom-mockup.jpg" alt="Rendering of the Apex Strength Club locker room and shower area with black tile and warm wood" loading="lazy">
           <span class="gallery-caption">Locker Rooms</span>
         </div>
-        <div class="gallery-item" data-lightbox="assets/images/web/bathroom-interior-image.jpg" data-caption="Restroom &amp; vanity">
+        <div class="gallery-item" data-lightbox="assets/images/web/bathroom-interior-image.jpg" data-caption="Restroom &amp; vanity" data-reveal="right" data-reveal-delay="3">
           <img src="assets/images/web/bathroom-interior-image.jpg" alt="Rendering of the Apex Strength Club restroom and vanity area" loading="lazy">
           <span class="gallery-caption">Restroom</span>
         </div>
-        <div class="gallery-item wide" data-lightbox="assets/images/web/inside-gym-mockups.jpg" data-caption="Facility overview">
+        <div class="gallery-item wide" data-lightbox="assets/images/web/inside-gym-mockups.jpg" data-caption="Facility overview" data-reveal="up" data-reveal-delay="3">
           <img src="assets/images/web/inside-gym-mockups.jpg" alt="Collage of Apex Strength Club interior renderings" loading="lazy">
           <span class="gallery-caption">Facility Overview</span>
         </div>
@@ -161,7 +161,7 @@
   </section>
 
   <section class="section section-alt" style="text-align:center; border-top:1px solid var(--border);">
-    <div class="container">
+    <div class="container" data-reveal="up">
       <h2>Ready to train here?</h2>
       <div class="cta-row" style="justify-content:center;">
         <a href="https://guru.gyminsight.com/join/woMivneUurTjLHj?optionId=ec7e93fc-0196-472d-82eb-3a60684f3c2f" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Claim Founding 50 Membership</a>
@@ -186,6 +186,6 @@
   document.getElementById('footer-ph').innerHTML = FOOTER;
   document.getElementById('sticky-cta-ph').innerHTML = MOBILE_STICKY_CTA;
 </script>
-<script src="assets/js/script.js?v=3"></script>
+<script src="assets/js/script.js?v=5"></script>
 </body>
 </html>

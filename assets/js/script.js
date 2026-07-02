@@ -7,7 +7,33 @@ document.addEventListener("DOMContentLoaded", () => {
   initLightbox();
   initVideoGuard();
   initMailtoForm();
+  initScrollReveal();
 });
+
+/* Pop elements in from the sides (or up) as they scroll into view. */
+function initScrollReveal() {
+  const items = document.querySelectorAll("[data-reveal]");
+  if (!items.length) return;
+
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) {
+    items.forEach((el) => el.classList.add("is-revealed"));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-revealed");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15, rootMargin: "0px 0px -60px 0px" }
+  );
+
+  items.forEach((el) => observer.observe(el));
+}
 
 function initNav() {
   const nav = document.getElementById("site-nav");
@@ -131,9 +157,20 @@ function initVideoGuard() {
     video.muted = true;
     video.setAttribute("muted", "");
     video.playsInline = true;
-    video.play().catch(() => {
-      /* Autoplay can be blocked; poster frame still shows via the video's poster attribute. */
-    });
+
+    // A single play() call at DOMContentLoaded often fires before the video
+    // has buffered anything on a real mobile connection (vs. instant on a
+    // local dev server) — the rejected promise gets swallowed and the video
+    // just sits there, which is what makes mobile browsers surface a native
+    // play button. Retry as more data becomes available, and once more on
+    // the first tap/scroll as a last resort so it never gets stuck paused.
+    const tryPlay = () => video.play().catch(() => {});
+    tryPlay();
+    video.addEventListener("loadedmetadata", tryPlay);
+    video.addEventListener("canplay", tryPlay);
+    ["touchstart", "click", "scroll"].forEach((evt) =>
+      document.addEventListener(evt, tryPlay, { once: true, passive: true })
+    );
   });
 }
 

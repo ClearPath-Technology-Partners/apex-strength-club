@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css?v=8">
+<link rel="stylesheet" href="assets/css/styles.css?v=11">
 
 <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
 <script defer src="/_vercel/insights/script.js"></script>
@@ -34,7 +34,7 @@
 <main>
 
   <section class="hero">
-    <video class="hero-media" data-bg-video autoplay muted loop playsinline poster="assets/images/posters/gym-interior-lobby.jpg">
+    <video class="hero-media" data-bg-video autoplay muted loop playsinline preload="auto" poster="assets/images/posters/gym-interior-lobby.jpg">
       <source src="assets/videos/optimized/gym-interior-lobby.mp4" type="video/mp4">
     </video>
     <div class="container hero-content" style="padding-top:190px;">
@@ -46,7 +46,7 @@
 
   <section class="section offer-band" style="border-top:none;">
     <div class="container offer-grid">
-      <div>
+      <div data-reveal="left">
         <span class="kicker">The Offer</span>
         <h2>Everything included with Founding 50.</h2>
         <p class="lead">The Founding 50 offer is the strongest way to join Apex early. The limit is specific, the price is specific, and the benefit is permanent.</p>
@@ -65,7 +65,7 @@
         </ul>
         <a href="https://guru.gyminsight.com/join/woMivneUurTjLHj?optionId=ec7e93fc-0196-472d-82eb-3a60684f3c2f" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Claim Founding 50 Membership</a>
       </div>
-      <div class="offer-card">
+      <div class="offer-card" data-reveal="right">
         <div class="offer-price">$59<span>/month</span></div>
         <p class="offer-note">Recommended: Founding 50 memberships are officially live. Lock in $59/month pricing for life before the first 50 spots are gone. Your card will not be charged until Apex officially opens.</p>
         <ul class="offer-list">
@@ -81,7 +81,7 @@
 
   <section class="section section-alt">
     <div class="container">
-      <div class="section-header center">
+      <div class="section-header center" data-reveal="up">
         <span class="kicker" style="justify-content:center">After Launch</span>
         <h2>Standard Membership</h2>
         <p class="lead">Once the Founding 50 spots are filled, standard membership pricing and tiers will be announced. Join the email list to be notified the moment they're live &mdash; or ask about the waitlist once the doors open.</p>
@@ -94,20 +94,20 @@
 
   <section class="section">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header" data-reveal="up">
         <span class="kicker">Billing &amp; Terms</span>
         <h2>How billing works.</h2>
       </div>
       <div class="grid cols-3">
-        <div class="card">
+        <div class="card" data-reveal="left">
           <h3>No Charge Until Opening</h3>
           <p>Reserve your Founding 50 spot today. Your card is not charged until Apex officially opens its doors.</p>
         </div>
-        <div class="card">
+        <div class="card" data-reveal="up" data-reveal-delay="1">
           <h3>Month-to-Month</h3>
           <p>No long-term contract. The Founding 50 membership renews monthly and can be cancelled anytime.</p>
         </div>
-        <div class="card">
+        <div class="card" data-reveal="right">
           <h3>Locked-In Rate</h3>
           <p>Your $59/month rate stays locked in for life as long as your membership remains active &mdash; it never increases.</p>
         </div>
@@ -117,7 +117,7 @@
   </section>
 
   <section class="section section-alt" style="text-align:center; border-top:1px solid var(--border);">
-    <div class="container">
+    <div class="container" data-reveal="up">
       <h2>Once all 50 spots are claimed,<br>this offer is gone.</h2>
       <div class="cta-row" style="justify-content:center;">
         <a href="https://guru.gyminsight.com/join/woMivneUurTjLHj?optionId=ec7e93fc-0196-472d-82eb-3a60684f3c2f" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Claim Founding 50 Membership</a>
@@ -136,6 +136,6 @@
   document.getElementById('footer-ph').innerHTML = FOOTER;
   document.getElementById('sticky-cta-ph').innerHTML = MOBILE_STICKY_CTA;
 </script>
-<script src="assets/js/script.js?v=3"></script>
+<script src="assets/js/script.js?v=5"></script>
 </body>
 </html>
