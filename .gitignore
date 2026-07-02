@@ -2,7 +2,8 @@
 
 # Raw source renderings/videos — optimized/web versions in assets/*/web|optimized are what the site serves
 assets/videos/*.mp4
-assets/images/*.png
+assets/images/Gym Interior*.png
+assets/images/bathroom interior image.png
 
 # Reference/inspiration material, not part of the deployed site
 Gym Website Inspiration for Claude to Use/
