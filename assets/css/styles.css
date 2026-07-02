@@ -750,7 +750,7 @@ textarea.ff { resize: vertical; min-height: 110px; }
     transition: max-height 0.3s ease, padding 0.3s ease;
   }
   .nav-links.is-open { max-height: 640px; padding: 10px 22px 26px; }
-  .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--border); }
+  .nav-links a { display: block; width: 100%; padding: 14px 0; border-bottom: 1px solid var(--border); }
   .nav-links a::after { display: none; }
   .nav-toggle { display: flex; }
   /* .nav-links is position:fixed on mobile (out of flex flow), so with the CTA
