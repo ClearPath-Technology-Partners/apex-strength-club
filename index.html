@@ -65,34 +65,12 @@
     <div class="container hero-content">
       <span class="hero-badge">Vermilion, Ohio</span>
       <h1>Elevate.<br>Dominate.<br>Repeat.</h1>
-      <p class="lead">Premium 24/7 strength training. Family-owned. Opening late summer.</p>
-      <div class="cta-row">
-        <a href="memberships.html" class="btn btn-primary">View Memberships</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- VISUAL MOMENT -->
-  <section class="page-hero" style="min-height:70vh;">
-    <img class="page-hero-media" src="assets/images/web/gym-interior-main.jpg" alt="Rendering of the Apex Strength Club main strength floor with the gold Apex wordmark on the back wall" loading="lazy">
-    <div class="container page-hero-content" style="padding-bottom:64px;" data-reveal="up">
-      <span class="kicker">Built For Serious Training</span>
-      <a href="amenities.html" class="link-minimal">Explore the Club &rarr;</a>
-    </div>
-  </section>
-
-  <!-- BRAND STATEMENT -->
-  <section class="section" style="text-align:center;">
-    <div class="container" style="max-width:720px;" data-reveal="up">
-      <span class="kicker" style="justify-content:center">Family-Owned</span>
-      <h2>Every detail, considered.</h2>
-      <p class="lead">From the strength floor to the posing room to recovery &mdash; Apex is built to one standard. Membership is limited to 250 total spots.</p>
-      <a href="about.html" class="link-minimal">Our Story &rarr;</a>
+      <p class="lead" style="max-width:340px; font-size:1rem;">Premium 24/7 strength training. Family-owned. Opening late summer.</p>
     </div>
   </section>
 
   <!-- MEMBERSHIP CTA -->
-  <section class="section section-alt" style="text-align:center; border-top:1px solid var(--border);">
+  <section class="section section-alt" style="text-align:center;">
     <div class="container" data-reveal="up">
       <span class="kicker" style="justify-content:center">Membership</span>
       <h2>Starting at $64.99/month.</h2>
@@ -102,9 +80,62 @@
     </div>
   </section>
 
+  <!-- BRAND STATEMENT -->
+  <section class="section" style="text-align:center; border-top:1px solid var(--border);">
+    <div class="container" style="max-width:720px;" data-reveal="up">
+      <span class="kicker" style="justify-content:center">Family-Owned</span>
+      <h2>Every detail, considered.</h2>
+      <p class="lead">From the strength floor to the posing room to recovery &mdash; Apex is built to one standard. Membership is limited to 250 total spots.</p>
+      <a href="about.html" class="link-minimal">Our Story &rarr;</a>
+    </div>
+  </section>
+
+  <!-- GALLERY TEASER -->
+  <section class="section section-alt" id="gallery">
+    <div class="container">
+      <div class="section-header" data-reveal="up">
+        <span class="kicker">Inside Apex</span>
+        <h2>A first look at what's coming.</h2>
+        <p class="lead">Renderings of the strength floor, posing room, lobby, and locker rooms &mdash; the visual direction for the finished club.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item wide tall" data-lightbox="assets/images/web/gym-interior-main.jpg" data-caption="Main strength floor" data-reveal="left">
+          <img src="assets/images/web/gym-interior-main.jpg" alt="Rendering of the Apex Strength Club main weight room with racks and the gold Apex wordmark on the back wall" loading="lazy">
+          <span class="gallery-caption">Main Strength Floor</span>
+        </div>
+        <div class="gallery-item" data-lightbox="assets/images/web/gym-interior-lobby.jpg" data-caption="Front desk and lobby" data-reveal="right" data-reveal-delay="1">
+          <img src="assets/images/web/gym-interior-lobby.jpg" alt="Rendering of the Apex Strength Club lobby and front desk with gold signage" loading="lazy">
+          <span class="gallery-caption">Lobby</span>
+        </div>
+        <div class="gallery-item" data-lightbox="assets/images/web/posing-room-mockup.jpg" data-caption="Posing room" data-reveal="right" data-reveal-delay="2">
+          <img src="assets/images/web/posing-room-mockup.jpg" alt="Rendering of the Apex Strength Club posing room with mirrored wall and gold branding" loading="lazy">
+          <span class="gallery-caption">Posing Room</span>
+        </div>
+        <div class="gallery-item wide" data-lightbox="assets/images/web/gym-interior-main-2.jpg" data-caption="Dumbbell and accessory area" data-reveal="left" data-reveal-delay="2">
+          <img src="assets/images/web/gym-interior-main-2.jpg" alt="Rendering of the Apex Strength Club dumbbell and accessory training area" loading="lazy">
+          <span class="gallery-caption">Free Weight Area</span>
+        </div>
+        <div class="gallery-item" data-lightbox="assets/images/web/lockeroom-mockup.jpg" data-caption="Locker rooms and showers" data-reveal="right" data-reveal-delay="3">
+          <img src="assets/images/web/lockeroom-mockup.jpg" alt="Rendering of the Apex Strength Club locker room and shower area with black tile and warm wood" loading="lazy">
+          <span class="gallery-caption">Locker Rooms</span>
+        </div>
+      </div>
+      <div class="cta-row" style="margin-top:36px;">
+        <a href="amenities.html" class="btn btn-outline">See Full Amenities</a>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <div id="footer-ph"></div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" aria-label="Close image">&times;</button>
+  <img src="" alt="">
+  <p class="lightbox-caption"></p>
+</div>
 <div id="sticky-cta-ph"></div>
 
 <script src="assets/js/components.js?v=4"></script>
