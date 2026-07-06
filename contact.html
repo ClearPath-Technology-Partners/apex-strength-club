@@ -75,7 +75,7 @@
 
 <div id="nav-ph"></div>
 
-<main>
+<main id="main-content">
 
   <section class="page-hero" style="min-height:42vh;">
     <img class="page-hero-media" src="assets/images/web/building-visualization.jpg" alt="Aerial rendering of the Apex Strength Club building on Liberty Avenue in Vermilion, Ohio" loading="eager">
@@ -93,8 +93,10 @@
         <h2>Follow the build.</h2>
         <p class="lead">Be the first to know about construction milestones, the confirmed opening date, and membership updates.</p>
         <form class="form" id="email-signup-form" data-mailto="apexstrengthclub00@gmail.com">
-          <input class="ff" type="text" name="name" placeholder="Full name" required>
-          <input class="ff" type="email" name="email" placeholder="Email address" required>
+          <label class="visually-hidden" for="signup-name">Full name</label>
+          <input class="ff" type="text" id="signup-name" name="name" placeholder="Full name" required>
+          <label class="visually-hidden" for="signup-email">Email address</label>
+          <input class="ff" type="email" id="signup-email" name="email" placeholder="Email address" required>
           <button type="submit" class="btn btn-primary btn-block">Join the Email List</button>
           <p class="form-note form-note-status" role="status"></p>
         </form>
@@ -106,7 +108,7 @@
         <a href="memberships.html" class="btn btn-primary">View Memberships</a>
         <div style="margin-top:40px; padding-top:32px; border-top:1px solid var(--border);">
           <h3 style="font-size:1rem;">Find Us</h3>
-          <p>4345 Liberty Avenue<br>Vermilion, OH 44089</p>
+          <address style="font-style:normal;">4345 Liberty Avenue<br>Vermilion, OH 44089</address>
           <p><a href="mailto:apexstrengthclub00@gmail.com" class="text-gold">apexstrengthclub00@gmail.com</a></p>
         </div>
       </div>
@@ -131,32 +133,32 @@
       </div>
       <div class="faq-list" data-reveal="up">
         <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">When will Apex open?<span class="icon">+</span></button>
-          <div class="faq-answer"><div class="faq-answer-inner"><p>Apex is targeting a late August to September opening. The final date should be confirmed closer to launch.</p></div></div>
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">When will Apex open?<span class="icon" aria-hidden="true">+</span></button>
+          <div class="faq-answer" id="faq-answer-1"><div class="faq-answer-inner"><p>Apex is targeting a late August to September opening. The final date should be confirmed closer to launch.</p></div></div>
         </div>
         <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">How much does membership cost?<span class="icon">+</span></button>
-          <div class="faq-answer"><div class="faq-answer-inner"><p>Standard membership is $69.99/month, with a discounted $64.99/month rate for first responders and military. An annual plan paid in full is also available for $775.99.</p></div></div>
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">How much does membership cost?<span class="icon" aria-hidden="true">+</span></button>
+          <div class="faq-answer" id="faq-answer-2"><div class="faq-answer-inner"><p>Standard membership is $69.99/month, with a discounted $64.99/month rate for first responders and military. An annual plan paid in full is also available for $775.99.</p></div></div>
         </div>
         <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">Is the membership month-to-month?<span class="icon">+</span></button>
-          <div class="faq-answer"><div class="faq-answer-inner"><p>Yes. The Standard and First Responder &amp; Military plans are month-to-month with no long-term contract. We also offer a paid-in-full annual option.</p></div></div>
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">Is the membership month-to-month?<span class="icon" aria-hidden="true">+</span></button>
+          <div class="faq-answer" id="faq-answer-3"><div class="faq-answer-inner"><p>Yes. The Standard and First Responder &amp; Military plans are month-to-month with no long-term contract. We also offer a paid-in-full annual option.</p></div></div>
         </div>
         <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">Do you offer a discount for first responders or military?<span class="icon">+</span></button>
-          <div class="faq-answer"><div class="faq-answer-inner"><p>Yes &mdash; active and retired first responders and military members receive a discounted rate of $64.99/month.</p></div></div>
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-4">Do you offer a discount for first responders or military?<span class="icon" aria-hidden="true">+</span></button>
+          <div class="faq-answer" id="faq-answer-4"><div class="faq-answer-inner"><p>Yes &mdash; active and retired first responders and military members receive a discounted rate of $64.99/month.</p></div></div>
         </div>
         <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">Is membership limited?<span class="icon">+</span></button>
-          <div class="faq-answer"><div class="faq-answer-inner"><p>Yes. Apex caps membership at 250 total spots to keep the club uncrowded and equipment available when you need it.</p></div></div>
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-5">Is membership limited?<span class="icon" aria-hidden="true">+</span></button>
+          <div class="faq-answer" id="faq-answer-5"><div class="faq-answer-inner"><p>Yes. Apex caps membership at 250 total spots to keep the club uncrowded and equipment available when you need it.</p></div></div>
         </div>
         <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">Will Apex be open 24/7?<span class="icon">+</span></button>
-          <div class="faq-answer"><div class="faq-answer-inner"><p>Yes, Apex is planned as a 24/7 access facility with app-based entry.</p></div></div>
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-6">Will Apex be open 24/7?<span class="icon" aria-hidden="true">+</span></button>
+          <div class="faq-answer" id="faq-answer-6"><div class="faq-answer-inner"><p>Yes, Apex is planned as a 24/7 access facility with app-based entry.</p></div></div>
         </div>
         <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">Where is Apex located?<span class="icon">+</span></button>
-          <div class="faq-answer"><div class="faq-answer-inner"><p>Apex Strength Club is coming to 4345 Liberty Avenue in Vermilion, Ohio.</p></div></div>
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-7">Where is Apex located?<span class="icon" aria-hidden="true">+</span></button>
+          <div class="faq-answer" id="faq-answer-7"><div class="faq-answer-inner"><p>Apex Strength Club is coming to 4345 Liberty Avenue in Vermilion, Ohio.</p></div></div>
         </div>
       </div>
     </div>

@@ -62,6 +62,7 @@ function NAV(active) {
     .join("");
 
   return `
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <nav class="site-nav" id="site-nav">
   <a href="index.html" class="nav-logo">
     <img src="assets/images/favicon/logo-nav.png" alt="Apex Strength Club logo" width="46" height="46">
@@ -103,7 +104,7 @@ const FOOTER = `
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
-        <p>${APEX_ADDRESS_LINE1}<br>${APEX_ADDRESS_LINE2}</p>
+        <address style="font-style:normal;">${APEX_ADDRESS_LINE1}<br>${APEX_ADDRESS_LINE2}</address>
         <a href="mailto:${APEX_EMAIL}">${APEX_EMAIL}</a>
         <a href="contact.html">Join the email list</a>
       </div>
@@ -119,6 +120,7 @@ const FOOTER = `
         <p>24/7 app-based member access</p>
         <p>Opening late August&ndash;September</p>
         <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
       </div>
     </div>
     <div class="footer-bottom">

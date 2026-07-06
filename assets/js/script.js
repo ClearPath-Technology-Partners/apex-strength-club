@@ -115,6 +115,7 @@ function initLightbox() {
   const img = lightbox.querySelector("img");
   const caption = lightbox.querySelector(".lightbox-caption");
   const closeBtn = lightbox.querySelector(".lightbox-close");
+  let lastFocused = null;
 
   document.querySelectorAll("[data-lightbox]").forEach((item) => {
     item.addEventListener("click", () => {
@@ -125,17 +126,28 @@ function initLightbox() {
         img.alt = cap;
       }
       if (caption) caption.textContent = cap;
+      lastFocused = document.activeElement;
       lightbox.classList.add("is-open");
+      closeBtn?.focus();
     });
   });
 
-  const close = () => lightbox.classList.remove("is-open");
+  const close = () => {
+    lightbox.classList.remove("is-open");
+    lastFocused?.focus();
+  };
   closeBtn?.addEventListener("click", close);
   lightbox.addEventListener("click", (e) => {
     if (e.target === lightbox) close();
   });
   document.addEventListener("keydown", (e) => {
+    if (!lightbox.classList.contains("is-open")) return;
     if (e.key === "Escape") close();
+    // Single-control dialog: keep focus on the close button so Tab can't escape it.
+    if (e.key === "Tab") {
+      e.preventDefault();
+      closeBtn?.focus();
+    }
   });
 }
 

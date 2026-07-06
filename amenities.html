@@ -31,7 +31,7 @@
 
 <div id="nav-ph"></div>
 
-<main>
+<main id="main-content">
 
   <section class="hero">
     <video class="hero-media" data-bg-video autoplay muted loop playsinline preload="auto" poster="assets/images/posters/gym-interior-1.jpg">
@@ -128,34 +128,34 @@
         <h2>Every space, previewed.</h2>
       </div>
       <div class="gallery-grid">
-        <div class="gallery-item wide tall" data-lightbox="assets/images/web/gym-interior-main.jpg" data-caption="Main strength floor" data-reveal="left">
+        <button type="button" class="gallery-item wide tall" data-lightbox="assets/images/web/gym-interior-main.jpg" data-caption="Main strength floor" data-reveal="left">
           <img src="assets/images/web/gym-interior-main.jpg" alt="Rendering of the Apex Strength Club main weight room with racks and the gold Apex wordmark" loading="lazy">
           <span class="gallery-caption">Main Strength Floor</span>
-        </div>
-        <div class="gallery-item" data-lightbox="assets/images/web/gym-interior-main-2.jpg" data-caption="Free weight area" data-reveal="right" data-reveal-delay="1">
+        </button>
+        <button type="button" class="gallery-item" data-lightbox="assets/images/web/gym-interior-main-2.jpg" data-caption="Free weight area" data-reveal="right" data-reveal-delay="1">
           <img src="assets/images/web/gym-interior-main-2.jpg" alt="Rendering of the Apex Strength Club dumbbell and accessory training area" loading="lazy">
           <span class="gallery-caption">Free Weight Area</span>
-        </div>
-        <div class="gallery-item" data-lightbox="assets/images/web/gym-interior-lobby.jpg" data-caption="Lobby and front desk" data-reveal="right" data-reveal-delay="2">
+        </button>
+        <button type="button" class="gallery-item" data-lightbox="assets/images/web/gym-interior-lobby.jpg" data-caption="Lobby and front desk" data-reveal="right" data-reveal-delay="2">
           <img src="assets/images/web/gym-interior-lobby.jpg" alt="Rendering of the Apex Strength Club lobby and front desk with gold signage" loading="lazy">
           <span class="gallery-caption">Lobby</span>
-        </div>
-        <div class="gallery-item" data-lightbox="assets/images/web/posing-room-mockup.jpg" data-caption="Posing room" data-reveal="left" data-reveal-delay="1">
+        </button>
+        <button type="button" class="gallery-item" data-lightbox="assets/images/web/posing-room-mockup.jpg" data-caption="Posing room" data-reveal="left" data-reveal-delay="1">
           <img src="assets/images/web/posing-room-mockup.jpg" alt="Rendering of the Apex Strength Club posing room with mirrored wall" loading="lazy">
           <span class="gallery-caption">Posing Room</span>
-        </div>
-        <div class="gallery-item wide" data-lightbox="assets/images/web/lockeroom-mockup.jpg" data-caption="Locker rooms and showers" data-reveal="left" data-reveal-delay="2">
+        </button>
+        <button type="button" class="gallery-item wide" data-lightbox="assets/images/web/lockeroom-mockup.jpg" data-caption="Locker rooms and showers" data-reveal="left" data-reveal-delay="2">
           <img src="assets/images/web/lockeroom-mockup.jpg" alt="Rendering of the Apex Strength Club locker room and shower area with black tile and warm wood" loading="lazy">
           <span class="gallery-caption">Locker Rooms</span>
-        </div>
-        <div class="gallery-item" data-lightbox="assets/images/web/bathroom-interior-image.jpg" data-caption="Restroom &amp; vanity" data-reveal="right" data-reveal-delay="3">
+        </button>
+        <button type="button" class="gallery-item" data-lightbox="assets/images/web/bathroom-interior-image.jpg" data-caption="Restroom &amp; vanity" data-reveal="right" data-reveal-delay="3">
           <img src="assets/images/web/bathroom-interior-image.jpg" alt="Rendering of the Apex Strength Club restroom and vanity area" loading="lazy">
           <span class="gallery-caption">Restroom</span>
-        </div>
-        <div class="gallery-item wide" data-lightbox="assets/images/web/inside-gym-mockups.jpg" data-caption="Facility overview" data-reveal="up" data-reveal-delay="3">
+        </button>
+        <button type="button" class="gallery-item wide" data-lightbox="assets/images/web/inside-gym-mockups.jpg" data-caption="Facility overview" data-reveal="up" data-reveal-delay="3">
           <img src="assets/images/web/inside-gym-mockups.jpg" alt="Collage of Apex Strength Club interior renderings" loading="lazy">
           <span class="gallery-caption">Facility Overview</span>
-        </div>
+        </button>
       </div>
     </div>
   </section>
@@ -174,7 +174,7 @@
 <div id="footer-ph"></div>
 <div id="sticky-cta-ph"></div>
 
-<div class="lightbox" id="lightbox">
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview">
   <button class="lightbox-close" aria-label="Close image">&times;</button>
   <img src="" alt="">
   <p class="lightbox-caption"></p>
