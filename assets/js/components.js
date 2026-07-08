@@ -43,6 +43,7 @@ function NAV(active) {
   ];
   const moreLinks = [
     { href: "about.html", label: "About", key: "about" },
+    { href: "merchandise.html", label: "Merchandise", key: "merchandise" },
     { href: "contact.html", label: "Contact", key: "contact" },
   ];
   const moreIsActive = moreLinks.some((l) => l.key === active);
@@ -111,6 +112,7 @@ const FOOTER = `
         <h4>Explore</h4>
         <a href="memberships.html">Memberships</a>
         <a href="amenities.html">Amenities</a>
+        <a href="merchandise.html">Merchandise</a>
         <a href="about.html">About Apex</a>
         <a href="updates.html">The Build</a>
       </div>
