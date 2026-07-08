@@ -21,6 +21,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://apexstrengthclub.com/merchandise.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://apexstrengthclub.com/updates.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>

@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css?v=14">
+<link rel="stylesheet" href="assets/css/styles.css?v=15">
 
 <script type="application/ld+json">
 {
@@ -80,8 +80,20 @@
     </div>
   </section>
 
-  <!-- BRAND STATEMENT -->
+  <!-- DAY PASS CTA -->
   <section class="section" style="text-align:center; border-top:1px solid var(--border);">
+    <div class="container" data-reveal="up">
+      <span class="kicker" style="justify-content:center">New To Apex?</span>
+      <h2>Come Check It Out With A Day Pass!</h2>
+      <p class="lead" style="max-width:560px; margin-left:auto; margin-right:auto;">Not ready to commit to a membership? A day pass gets you full access to Apex for a single visit &mdash; no membership required.</p>
+      <div class="cta-row" style="justify-content:center;">
+        <a href="memberships.html#day-pass" class="btn btn-outline">Learn About Day Passes</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRAND STATEMENT -->
+  <section class="section section-alt" style="text-align:center; border-top:1px solid var(--border);">
     <div class="container" style="max-width:720px;" data-reveal="up">
       <span class="kicker" style="justify-content:center">Family-Owned</span>
       <h2>Every detail, considered.</h2>
@@ -91,7 +103,7 @@
   </section>
 
   <!-- GALLERY TEASER -->
-  <section class="section section-alt" id="gallery">
+  <section class="section" id="gallery">
     <div class="container">
       <div class="section-header" data-reveal="up">
         <span class="kicker">Inside Apex</span>
@@ -138,7 +150,7 @@
 </div>
 <div id="sticky-cta-ph"></div>
 
-<script src="assets/js/components.js?v=4"></script>
+<script src="assets/js/components.js?v=5"></script>
 <script>
   document.getElementById('nav-ph').innerHTML = NAV(document.body.dataset.page);
   document.getElementById('footer-ph').innerHTML = FOOTER;
