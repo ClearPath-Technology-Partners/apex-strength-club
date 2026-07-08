@@ -14,7 +14,7 @@
     </script>
 */
 
-const CLEARPATH_URL = "https://www.clearpathtechnology.org/"; // constant across every ClearPath build
+const CIRROFLOW_URL = "https://www.cirroflowtech.com/";
 
 // Membership signup links (GymInsight) — Founding 50 is sold out; these are the
 // current tiers, each with its own checkout link. Single source of truth, used
@@ -128,7 +128,7 @@ const FOOTER = `
     <div class="footer-bottom">
       <p>&copy; <span id="year"></span> Apex Strength Club. All rights reserved.</p>
       <p class="footer-credit">
-        <a href="${CLEARPATH_URL}" target="_blank" rel="noopener noreferrer">Website by ClearPath Technology Partners</a>
+        <a href="${CIRROFLOW_URL}" target="_blank" rel="noopener noreferrer">Website by CirroFlow Technologies, LLC</a>
       </p>
     </div>
     <div class="footer-disclaimers">
